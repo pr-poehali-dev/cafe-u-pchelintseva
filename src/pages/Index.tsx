@@ -41,9 +41,13 @@ const Index = () => {
                 <Icon name="Coffee" size={24} className="mr-2" />
                 Наше меню
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                <Icon name="MapPin" size={24} className="mr-2" />
-                Как добраться
+              <Button 
+                size="lg" 
+                className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-6"
+                onClick={() => window.open('https://wa.me/79123456789?text=Здравствуйте!%20Хочу%20забронировать%20столик', '_blank')}
+              >
+                <Icon name="MessageCircle" size={24} className="mr-2" />
+                Написать в WhatsApp
               </Button>
             </div>
             
@@ -176,6 +180,16 @@ const Index = () => {
           <p className="text-sm text-muted-foreground pt-4">© 2024 Кафе у Пчелинцева. Сделано с ❤️</p>
         </div>
       </footer>
+
+      <a 
+        href="https://wa.me/79123456789?text=Здравствуйте!%20Хочу%20забронировать%20столик" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:scale-110 transition-all z-50 animate-scale-in"
+        aria-label="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" size={32} />
+      </a>
     </div>
   );
 };
