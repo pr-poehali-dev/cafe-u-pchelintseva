@@ -16,32 +16,54 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="pt-24 pb-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h2 className="text-5xl md:text-6xl font-bold leading-tight text-foreground">
-                Добро пожаловать в наш уютный уголок
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Домашнее тепло, ароматный кофе и душевная атмосфера гаража, превращенного в любимое место встреч
-              </p>
-              <div className="flex gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  <Icon name="Coffee" size={20} className="mr-2" />
-                  Наше меню
-                </Button>
-                <Button size="lg" variant="outline">
-                  <Icon name="MapPin" size={20} className="mr-2" />
-                  Как добраться
-                </Button>
+      <section id="home" className="pt-32 pb-20 px-4 min-h-screen flex items-center">
+        <div className="container mx-auto text-center">
+          <div className="max-w-5xl mx-auto space-y-12 animate-fade-in">
+            <div className="inline-block">
+              <div className="bg-gradient-to-r from-primary to-orange-600 p-1 rounded-3xl shadow-2xl">
+                <div className="bg-background px-12 py-8 rounded-3xl border-4 border-primary/20">
+                  <h1 className="text-6xl md:text-8xl font-bold text-primary mb-2 tracking-tight">
+                    Кафе у Пчелинцева
+                  </h1>
+                  <p className="text-xl md:text-2xl text-muted-foreground italic">
+                    Гаражный уют с домашним теплом
+                  </p>
+                </div>
               </div>
             </div>
-            <div className="relative animate-scale-in">
+            
+            <p className="text-2xl text-foreground max-w-2xl mx-auto">
+              Домашнее тепло, ароматный кофе и душевная атмосфера гаража, превращенного в любимое место встреч
+            </p>
+            
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-6">
+                <Icon name="Coffee" size={24} className="mr-2" />
+                Наше меню
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                <Icon name="MapPin" size={24} className="mr-2" />
+                Как добраться
+              </Button>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 pt-8">
               <img 
                 src="https://cdn.poehali.dev/projects/0c4987e6-401c-42c2-be69-34c27135d401/files/1b3d0ec1-39b5-4637-9824-a8e23058dc2f.jpg" 
                 alt="Кафе у Пчелинцева" 
-                className="rounded-2xl shadow-2xl w-full object-cover"
+                className="rounded-xl shadow-xl w-full h-64 object-cover animate-scale-in"
+              />
+              <img 
+                src="https://cdn.poehali.dev/projects/0c4987e6-401c-42c2-be69-34c27135d401/files/7d282fd2-9397-4ae3-940d-d03d6e959a6f.jpg" 
+                alt="Интерьер кафе" 
+                className="rounded-xl shadow-xl w-full h-64 object-cover animate-scale-in"
+                style={{ animationDelay: '0.1s' }}
+              />
+              <img 
+                src="https://cdn.poehali.dev/projects/0c4987e6-401c-42c2-be69-34c27135d401/files/ce56e5c0-9b7e-4f85-9cc1-745b46fb77a3.jpg" 
+                alt="Кофе" 
+                className="rounded-xl shadow-xl w-full h-64 object-cover animate-scale-in"
+                style={{ animationDelay: '0.2s' }}
               />
             </div>
           </div>
@@ -77,46 +99,32 @@ const Index = () => {
       </section>
 
       <section id="about" className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <img 
-                src="https://cdn.poehali.dev/projects/0c4987e6-401c-42c2-be69-34c27135d401/files/7d282fd2-9397-4ae3-940d-d03d6e959a6f.jpg" 
-                alt="Интерьер кафе" 
-                className="rounded-2xl shadow-xl w-full object-cover"
-              />
-              <img 
-                src="https://cdn.poehali.dev/projects/0c4987e6-401c-42c2-be69-34c27135d401/files/ce56e5c0-9b7e-4f85-9cc1-745b46fb77a3.jpg" 
-                alt="Кофе" 
-                className="rounded-2xl shadow-xl w-full object-cover"
-              />
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">О нас</h2>
+            <div className="space-y-6 text-lg text-muted-foreground">
+              <p>
+                <span className="text-primary font-semibold text-2xl">"Кафе у Пчелинцева"</span> — это не просто кафе. 
+                Это место с историей, душой и характером.
+              </p>
+              <p>
+                Всё началось с обычного гаража, который хозяин решил превратить в уютное пространство 
+                для встреч с друзьями. Деревянные столы, винтажный декор и запах свежесваренного кофе — 
+                так родилось наше кафе.
+              </p>
+              <p>
+                Мы сохранили ту самую гаражную атмосферу: искренность, простоту и тепло. 
+                Здесь каждый гость — не просто посетитель, а желанный друг.
+              </p>
+              <p className="text-xl text-foreground font-medium">
+                Приходите к нам за настоящим кофе, домашней выпечкой и приятными разговорами. 
+                У Пчелинцева всегда рады гостям!
+              </p>
             </div>
-            <div className="space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground">О нас</h2>
-              <div className="space-y-4 text-lg text-muted-foreground">
-                <p>
-                  <span className="text-primary font-semibold">"Кафе у Пчелинцева"</span> — это не просто кафе. 
-                  Это место с историей, душой и характером.
-                </p>
-                <p>
-                  Всё началось с обычного гаража, который хозяин решил превратить в уютное пространство 
-                  для встреч с друзьями. Деревянные столы, винтажные декор и запах свежесваренного кофе — 
-                  так родилось наше кафе.
-                </p>
-                <p>
-                  Мы сохранили ту самую гаражную атмосферу: искренность, простоту и тепло. 
-                  Здесь каждый гость — не просто посетитель, а желанный друг.
-                </p>
-                <p>
-                  Приходите к нам за настоящим кофе, домашней выпечкой и приятными разговорами. 
-                  У Пчелинцева всегда рады гостям!
-                </p>
-              </div>
-              <div className="flex gap-4 pt-4">
-                <div className="flex items-center gap-2">
-                  <Icon name="Clock" size={20} className="text-primary" />
-                  <span className="text-foreground">Ежедневно 8:00 - 22:00</span>
-                </div>
+            <div className="flex gap-4 pt-4 justify-center">
+              <div className="flex items-center gap-2 text-lg">
+                <Icon name="Clock" size={24} className="text-primary" />
+                <span className="text-foreground font-medium">Ежедневно 8:00 - 22:00</span>
               </div>
             </div>
           </div>
